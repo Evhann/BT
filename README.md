@@ -1,4 +1,5 @@
 # BT
+<img src="https://img.shields.io/github/languages/code-size/chateauvisionn/bt"> <img src="https://img.shields.io/tokei/lines/github/chateauvisionn/bt">
 
 ## Installation & Usage
 
