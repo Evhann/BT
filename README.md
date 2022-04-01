@@ -2,4 +2,6 @@
 
 ## Installation & Usage
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EJAcFkrdY4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Click on this image to see the video:
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/EJAcFkrdY4c/0.jpg)](http://www.youtube.com/watch?v=EJAcFkrdY4c "BT Installation & Usage (Python DOS)")
