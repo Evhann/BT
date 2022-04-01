@@ -52,12 +52,12 @@ def guiinit():
 def pide():
     from os.path import isfile, isdir
     if isfile("gui/g.i"):
-        if isdir("gui/pIDE"):
+        if isdir("gui/pide"):
             from os import name, system
             if name == 'nt':
-                system("python gui/pIDE/src/main.pyw")
+                system("python gui/pide/src/main.pyw")
             else:
-                system("python3 gui/pIDE/src/main.pyw")
+                system("python3 gui/pide/src/main.pyw")
     else:
         guiinit()
         print("Please restart pIDE.")
