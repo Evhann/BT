@@ -2,7 +2,7 @@
 from os import name, system
 import datetime
 
-commands = ["echo", "mkdir", "cd", "rm", "rmdir", "ls", "date", "clear", "cat", "guiinit", "pide"]
+commands = ["echo", "mkdir", "cd", "rm", "rmdir", "ls", "date", "clear", "cat", "guiinit", "pide", "calc"]
 
 def echo(text: str):
     print(text)
@@ -61,3 +61,16 @@ def pide():
     else:
         guiinit()
         print("Please restart pIDE.")
+
+def calc():
+    from os.path import isfile, isdir
+    if isfile("gui/g.i"):
+        if isdir("gui/calc"):
+            from os import name, system
+            if name == 'nt':
+                system("python gui/calc/src/main.pyw")
+            else:
+                system("python3 gui/calc/src/main.pyw")
+    else:
+        guiinit()
+        print("Please restart calc.")

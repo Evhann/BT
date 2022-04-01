@@ -3,9 +3,11 @@ from commands import *
 from errors import *
 from sys import exit
 from colorama import Fore, Style
+ver = "BT build 010422.1"
 
-print("BT build 010422")
+
 clear()
+print(ver)
 while True:
     command_input = input(f"{Fore.GREEN}?{Style.RESET_ALL}> ")
     command_input_split = command_input.split()
@@ -30,6 +32,10 @@ while True:
             guiinit()
         case "pide":
             pide()
+        case "calc":
+            calc()
+        case "btver":
+            print(ver)
         case default:
             pass
     if current_command not in commands:
