@@ -39,4 +39,4 @@ while True:
         case default:
             pass
     if current_command not in commands:
-        raise UnknownCommand(f"Command {current_command} not found")
+        UnknownCommand(current_command)

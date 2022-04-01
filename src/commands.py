@@ -2,7 +2,7 @@
 from os import name, system
 import datetime
 
-commands = ["echo", "mkdir", "cd", "rm", "rmdir", "ls", "date", "clear", "cat", "guiinit", "pide", "calc"]
+commands = ["echo", "mkdir", "cd", "rm", "rmdir", "ls", "date", "clear", "cat", "guiinit", "pide", "calc", "btver"]
 
 def echo(text: str):
     print(text)

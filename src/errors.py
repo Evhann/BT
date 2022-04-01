@@ -1,7 +1,7 @@
 # /BT/src/errors.py
 
-class UnknownCommand(Exception):
-    pass
+def UnknownCommand(command):
+    print(f"Command {command} doesn't exist.")
 
 class NotEnoughPermissions(Exception):
     pass
