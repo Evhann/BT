@@ -44,7 +44,7 @@ def guiinit():
     from os.path import isdir
     if isdir("gui"):
         with open("gui/g.i", "w") as f:
-            f.write(" ")
+            f.write("// this file is just to know if the user got the gui folder")
     else:
         print("Can't initialize gui.")
         print("Please download the gui module.")
