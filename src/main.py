@@ -3,13 +3,17 @@ from commands import *
 from errors import *
 from sys import exit
 from colorama import Fore, Style
-ver = "BT build 010422.1"
+ver = "BT build 010422.2"
 
+# get windows username
+def get_username():
+    import getpass
+    return getpass.getuser()
 
 clear()
 print(ver)
 while True:
-    command_input = input(f"{Fore.GREEN}?{Style.RESET_ALL}> ")
+    command_input = input(f"{Fore.GREEN}{get_username()}{Fore.RED}?{Style.RESET_ALL}> ")
     command_input_split = command_input.split()
     current_command = command_input_split[0]
     match current_command:
