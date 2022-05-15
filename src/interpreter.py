@@ -6,7 +6,6 @@ import threading
 
 ver = "BT build 150522"
 def interpreter():
-    clear()
     while True:
         command_input = input(f"{Fore.RED}?{Fore.GREEN}{get_username()}{Style.RESET_ALL}> ")
         command_input_split = command_input.split()
