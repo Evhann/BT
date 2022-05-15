@@ -66,7 +66,7 @@ def guiinit():
 
 def pide():
     from os.path import isfile, isdir
-    if isfile("gui/g.i"):
+    if isfile("gui/g.info"):
         if isdir("gui/pide"):
             from os import name, system
             if name == 'nt':
@@ -79,7 +79,7 @@ def pide():
 
 def calc():
     from os.path import isfile, isdir
-    if isfile("gui/g.i"):
+    if isfile("gui/g.info"):
         if isdir("gui/calc"):
             from os import name, system
             if name == 'nt':
