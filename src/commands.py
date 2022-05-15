@@ -1,27 +1,38 @@
 # /BT/src/commands.py
-from os import name, system
-import datetime
+import os, datetime, os.path, shutil
 
 commands = ["echo", "mkdir", "cd",
             "rm", "rmdir", "ls",
             "date", "clear", "cat",
             "guiinit", "pide", "calc",
-            "btver"]
+            "btver", "file"]
 
 def echo(text: str):
     print(text)
 
 def mkdir(dir: str):
-    pass
+    if os.path.isdir(dir):
+        print("Directory already exists.")
+    else:
+        os.mkdir(dir)
+        print(f"Directory \"{dir}\" created.")
 
 def cd(dir: str):
-    pass
+    os.chdir(dir)
 
 def rm(file: str):
-    pass
+    if os.path.isfile(file):
+        os.remove(file)
+        print(f"File \"{file}\" removed.")
+    else:
+        print(f"File \"{file}\" doesn't exist.")
 
 def rmdir(dir: str):
-    pass
+    if os.path.isdir(dir):
+        shutil.rmtree(dir)
+        print(f"Directory \"{dir}\" removed.")
+    else:
+        print(f"Directory \"{dir}\" doesn't exist.")
 
 def ls():
     from os import listdir
@@ -33,10 +44,10 @@ def date():
     print(datetime.date.today())
 
 def clear():
-    if name == 'nt':
-        system('cls')
+    if os.name == 'nt':
+        os.system('cls')
     else:
-        system('clear')
+        os.system('clear')
 
 def cat(file: str):
     from os.path import isfile
@@ -47,7 +58,7 @@ def cat(file: str):
 def guiinit():
     from os.path import isdir
     if isdir("gui"):
-        with open("gui/g.i", "w") as f:
+        with open("gui/g.info", "w") as f:
             f.write("// this file is just to know if the user got the gui folder")
     else:
         print("Can't initialize gui.")
@@ -78,3 +89,8 @@ def calc():
     else:
         guiinit()
         print("Please restart calc.")
+
+# get windows username
+def get_username():
+    from getpass import getuser
+    return getuser()
