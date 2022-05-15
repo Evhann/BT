@@ -40,6 +40,8 @@ def interpreter():
                 print(ver)
             case "file":
                 interpret_file(command_input_split[1])
+            case "help":
+                help()
             case default:
                 pass
         if current_command not in commands:
@@ -81,6 +83,8 @@ def interpret_file(file_name):
                     t.start()
                 case "btver":
                     print(ver)
+                case "help":
+                    help()
                 case "":
                     print("Warning: Don't put empty lines in your file.")
                 case default:

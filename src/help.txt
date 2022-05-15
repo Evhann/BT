@@ -1,0 +1,14 @@
+echo <text>: print a text
+mkdir <dir>: create a directory
+rmdir <dir>: remove a directory
+rm <file>: remove a file
+cd <dir>: change directory
+ls: list files in current directory
+date: print current date
+clear: clear screen
+help: print this help
+exit: exit the shell
+guiinit : initialize the gui
+pide : gui ide
+calc : gui calculator
+file <file> : parse and execute a command file

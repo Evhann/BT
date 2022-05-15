@@ -5,7 +5,7 @@ commands = ["echo", "mkdir", "cd",
             "rm", "rmdir", "ls",
             "date", "clear", "cat",
             "guiinit", "pide", "calc",
-            "btver", "file"]
+            "btver", "file", "help"]
 
 def echo(text: str):
     print(text)
@@ -94,3 +94,8 @@ def calc():
 def get_username():
     from getpass import getuser
     return getuser()
+
+def help():
+    with open("help.txt", "r") as f:
+        print(f.read())
+        f.close()
