@@ -1,10 +1,10 @@
 from commands import *
 from errors import *
+from infos import *
 from sys import exit
 from colorama import Fore, Style
-import threading
+import threading, infos
 
-ver = "BT build 150522"
 def interpreter():
     while True:
         command_input = input(f"{Fore.RED}?{Fore.GREEN}{get_username()}{Style.RESET_ALL}> ")
@@ -36,7 +36,7 @@ def interpreter():
                 t = threading.Thread(target=calc)
                 t.start()
             case "btver":
-                print(ver)
+                print(infos.ver)
             case "file":
                 interpret_file(command_input_split[1])
             case "help":
@@ -81,7 +81,7 @@ def interpret_file(file_name):
                     t = threading.Thread(target=calc)
                     t.start()
                 case "btver":
-                    print(ver)
+                    print(infos.ver)
                 case "help":
                     help()
                 case "":
