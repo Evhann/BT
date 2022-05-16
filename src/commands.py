@@ -5,7 +5,7 @@ commands = ["echo", "mkdir", "cd",
             "rm", "rmdir", "ls",
             "date", "clear", "cat",
             "guiinit", "pide", "calc",
-            "btver", "file", "help"]
+            "btver", "file", "help", "cwd"]
 
 def echo(text: str):
     print(text)
@@ -99,3 +99,6 @@ def help():
     with open("help.txt", "r") as f:
         print(f.read())
         f.close()
+
+def cwd():
+    print(os.getcwd())

@@ -13,6 +13,7 @@ Commands:
     pide : gui ide
     calc : gui calculator
     file <file> : parse and execute a command file
+    cwd : print current working directory
 
 Args:
     --no-clear | -nc: do not clear the screen when starting BT

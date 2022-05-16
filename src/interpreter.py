@@ -41,6 +41,8 @@ def interpreter():
                 interpret_file(command_input_split[1])
             case "help":
                 help()
+            case "cwd":
+                cwd()
             case default:
                 pass
         if current_command not in commands:
@@ -84,8 +86,11 @@ def interpret_file(file_name):
                     print(infos.ver)
                 case "help":
                     help()
+                case "cwd":
+                    cwd()
                 case "":
                     print("Warning: Don't put empty lines in your file.")
+                    continue
                 case default:
                     pass
             if current_command not in commands:
